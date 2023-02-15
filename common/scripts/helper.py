@@ -27,7 +27,7 @@ def get_automl_environment(workspace: Workspace, automl_settings_dict: AzureAuto
         RunConfiguration(),
         logger=null_logger)
     train_env = run_configuration.environment
-    train_env.environment_variables['DISABLE_ENV_MISMATCH'] = True
+    train_env.environment_variables['DISABLE_ENV_MISMATCH'] = False
     train_env.environment_variables['AZUREML_FLUSH_INGEST_WAIT'] = ''
     train_env.environment_variables['AZUREML_METRICS_POLLING_INTERVAL'] = '30'
     return run_configuration.environment
